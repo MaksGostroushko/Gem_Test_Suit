@@ -52,22 +52,22 @@ module TestSuite
   # Type == to_s,_i,_sym,_arr
   def self.to_s(actual)
     puts "Object converted to string"
-    puts "It is #{actual.to_s.inspect} now"
+    puts "It is #{actual.to_s.inspect} "
   end
 
   def self.to_i(actual)
     puts "Object converted to num"
-    puts "It is #{actual.to_i} now"
+    puts "It is #{actual.to_i} "
   end
 
   def self.to_sym(actual)
     actual = actual.to_s if actual.is_a?(Numeric)
     puts "Object converted to sym"
-    puts "It is #{actual.to_sym.inspect} now"
+    puts "It is #{actual.to_sym.inspect} "
   end
 
   def self.str_to_arr(actual)
     puts "Object converted to array"
-    puts "It is #{actual.split.inspect} now"
+    puts "It is #{actual.split.inspect}"
   end
 end
