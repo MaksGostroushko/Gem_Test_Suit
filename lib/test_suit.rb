@@ -1,38 +1,34 @@
 require_relative "test_suit/version"
 
 module TestSuite
-
-  def self.to_f(actual)
-    puts "Element now is integer(float)"
-    puts "It is #{actual.to_f} "
-  end
-
-  def self.hash_empty?(actual)
+class << self
+  
+  def hash_empty?(actual)
     puts actual.empty? ? "Hash is empty" : "Hash is not empty"
     puts "Hash: #{actual}"
   end
 
-   def self.number?(actual)
+   def number?(actual)
     puts actual.is_a?(Numeric) ? "Object is a number" : "Object isn't a number"
     puts "Object: #{actual}"
   end
 
-  def self.string?(actual)
+  def string?(actual)
     puts actual.is_a?(String) ? "Object is a string" : "Object isn't a string"
     puts "Object: #{actual}"
   end
 
-  def self.hash?(actual)
+  def hash?(actual)
     puts actual.is_a?(Hash) ? "Object is a hash" : "Object isn't a hash"
     puts "Object: #{actual}"
   end
 
-  def self.array?(actual)
+  def array?(actual)
     puts actual.is_a?(Array) ? "Object is an array" : "Object isn't an array"
     puts "Object: #{actual}"
   end
 
-  def self.symbol?(actual)
+  def symbol?(actual)
     puts actual.is_a?(Symbol) ? "Object is a symbol" : "Object is not a symbol"
     puts "Element: #{actual}"
   end
@@ -40,6 +36,11 @@ module TestSuite
   def self.to_s(actual)
     puts "Element now is string"
     puts "It is #{actual.to_s.inspect} "
+  end
+  
+  def to_f(actual)
+    puts "Element now is integer(float)"
+    puts "It is #{actual.to_f} "
   end
 
   def self.to_i(actual)
